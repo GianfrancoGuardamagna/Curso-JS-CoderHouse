@@ -1,3 +1,226 @@
 body {
-    background-color: rgba(0, 232, 143, 0.781);
-  }
+  background-image: url('../img/background.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  font-family: 'Pixelify Sans', cursive;
+}
+
+.hr{
+  width: 80%;
+}
+
+.form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pixelify Sans', cursive;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-up-down-buttons {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  display: none;
+}
+
+.formIngreso{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  background-color: rgba(47, 47, 47, 0.463);
+  border-radius: 15px;
+  gap: 1vh;
+  padding: 1%;
+}
+
+.entorno {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ambiente {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: repeat(4, 1fr); 
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  background-color: rgba(47, 47, 47, 0.463);
+  border-radius: 15px;
+  width: 65%;
+}
+
+.imagenHumedad {
+  grid-column: 1; 
+  grid-row: 1;
+}
+
+.imagenTanque {
+  grid-column: 1; 
+  grid-row: 2;
+}
+
+.imagenTemperatura {
+  grid-column: 1; 
+  grid-row: 3;
+}
+
+.imagenViento {
+  grid-column: 1; 
+  grid-row: 4;
+}
+
+.valorHumedad {
+  grid-column: 2; 
+  grid-row: 1;
+  font-family: 'MuseoModerno', cursive; 
+}
+
+.valorTanque {
+  grid-column: 2; 
+  grid-row: 2; 
+  font-family: 'MuseoModerno', cursive; 
+}
+.valorTemperatura {
+  grid-column: 2; 
+  grid-row: 3; 
+  font-family: 'MuseoModerno', cursive; 
+}
+.valorViento {
+  grid-column: 2; 
+  grid-row: 4; 
+  font-family: 'MuseoModerno', cursive; 
+}
+
+.ambienteHumedadEstado {
+  grid-column: 5; 
+  grid-row: 1; 
+  font-family: 'Pixelify Sans', cursive;
+}
+
+.ambienteTanqueEstado {
+  grid-column: 5; 
+  grid-row: 2; 
+  font-family: 'Pixelify Sans', cursive;
+}
+
+.ambienteTemperaturaEstado {
+  grid-column: 5;
+  grid-row: 3;
+  font-family: 'Pixelify Sans', cursive;
+}
+
+.ambienteVientoEstado {
+  grid-column: 5;
+  grid-row: 4;
+  font-family: 'Pixelify Sans', cursive;
+}
+
+.ambiente img {
+  width: 10vh;
+}
+
+.plantas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  width: 100%;
+  font-family: 'Pixelify Sans', cursive;
+  align-items: center;
+  justify-items: center;
+  background-color: rgba(47, 47, 47, 0.463);
+  border-radius: 15px;
+  margin-top: 3vh;
+}
+
+.plantas img {
+  width: 10vh;
+  grid-column: 1;
+}
+
+.estadoPlantaUno{
+grid-column: 3;
+grid-row: 1;
+}
+
+.estadoPlantaDos{
+grid-column: 3;
+grid-row: 2;
+}
+
+.estadoPlantaTres{
+grid-column: 3;
+grid-row: 3;
+}
+
+.estadoPlantaCuatro{
+grid-column: 3;
+grid-row: 4;
+display: none;
+}
+
+.estadoPlantaCinco{
+grid-column: 3;
+grid-row: 5;
+display: none;
+}
+
+.estadoPlantaSeis{
+grid-column: 3;
+grid-row: 6;
+display: none;
+}
+
+.estadoPlantaSiete{
+grid-column: 3;
+grid-row: 7;
+display: none;
+}
+
+.estadoPlantaOcho{
+grid-column: 3;
+grid-row: 8;
+display: none;
+}
+
+.estadoPlantaNueve{
+grid-column: 3;
+grid-row: 9;
+display: none;
+}
+
+.estadoPlantaDiez{
+  grid-column: 3;
+  grid-row: 10;
+  display: none;
+}
+
+.mostrarPlanta{
+  grid-row: 4;
+}
+
+.mostrarPlantaBoton{
+  grid-row: 5;
+}
+
+.mostrarPlantaResultado{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row:6;
+  grid-column: span 3;
+  font-family: 'MuseoModerno', cursive;
+}
