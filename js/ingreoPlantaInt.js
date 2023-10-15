@@ -11,10 +11,7 @@ import { plantas } from './ingresoPlantaExt.js'
       let ingresoPlanta = new Planta(nombrePlantaNueva, humedadPlantaNueva, lumensPlantaNueva)
   
       plantas.push(ingresoPlanta)
-  
-      document.getElementById("inputNombre").value = ""
-      document.getElementById("inputHumedad").value = ""
-      document.getElementById("inputLumens").value = ""
+
     } else {
       Toastify({
         text: "Please, fullfill the form correctly",
@@ -29,7 +26,7 @@ import { plantas } from './ingresoPlantaExt.js'
           background: "linear-gradient(to right, rgb(107, 0, 134), rgb(45, 0, 56)",
         },
         onClick: function () { }
-      }).showToast();
+      }).showToast;
     }
     if (plantas.length >= 3) {
       Toastify({
@@ -51,4 +48,7 @@ import { plantas } from './ingresoPlantaExt.js'
       stopArray.id = ''
     }
   
+    document.getElementById("inputNombre").value = ""
+    document.getElementById("inputHumedad").value = ""
+    document.getElementById("inputLumens").value = ""
   });
