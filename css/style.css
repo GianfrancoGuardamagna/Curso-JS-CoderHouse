@@ -6,10 +6,66 @@ body {
   gap: 2vh;
 }
 
+.swal-modal {
+  background-color: rgba(107, 0, 134, 0.765);
+  border: 3px solid rgb(48, 48, 48);
+  opacity: 100;
+}
+
+.swal-text {
+  font-family: 'MuseoModerno', cursive;
+  font-size: 4vh;
+  font-weight: 600;
+}
+
+.musicBackground{
+  display: none;
+}
+
+.tituloBienvenida{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  font-family: 'Pixelify Sans', cursive;
+  font-size: 5vh;
+}
+
+.botonBienvenida{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  gap: 7vh;
+}
+
+.botonBienvenida button{
+  height: 15vh;
+  width: 50vh;
+  border-radius: 15px;
+  background-color: rgb(107, 0, 134);
+  border-color: black;
+  border-width: 5px;
+  font-family: 'MuseoModerno', cursive;
+  font-size: 4vh;
+  font-weight: 600;
+}
+
+.botonBienvenida button a{
+  text-decoration: none;
+  color: black;
+}
+
+.tosty{
+  font-family: 'MuseoModerno', cursive;
+}
+
 .titulo {
   display: flex;
   justify-content: center;
   font-family: 'Pixelify Sans', cursive;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hr{
@@ -51,13 +107,156 @@ input[type="number"]::-webkit-up-down-buttons {
   flex-direction: column;
 }
 
-.ambiente {
+.ambienteExterior{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: repeat(8, 1fr); 
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+  background-color: rgba(47, 47, 47, 0.463);
+  border-radius: 15px;
+  width: 65%;
+}
+
+.ambienteExterior img{
+  width: 10vh;
+}
+
+.valorExterior{
+  display: grid;
+  grid-column: 3;
+  font-family: 'MuseoModerno', cursive;
+  justify-content: center;
+  align-items: center;
+}
+
+.valorTituloProbabilidadLluvia{
+  display: grid;
+  grid-column: 2;
+  grid-row: 1;
+  font-family: 'Pixelify Sans', cursive;
+    justify-content: center;
+  align-items: center;
+}
+
+.valorTituloHumedadExterior{
+  display: grid;
+  grid-column: 2;
+  grid-row: 2;
+  font-family: 'Pixelify Sans', cursive;
+    justify-content: center;
+  align-items: center;
+}
+
+.valorTituloHumedadSuelo{
+  display: grid;
+  grid-column: 2;
+  grid-row: 3;
+  font-family: 'Pixelify Sans', cursive;
+    justify-content: center;
+  align-items: center;
+}
+
+.valorTituloTemperaturaSuelo{
+  display: grid;
+  grid-column: 2;
+  grid-row: 4;
+  font-family: 'Pixelify Sans', cursive;
+    justify-content: center;
+  align-items: center;
+}
+
+.valorTituloTemperaturaExterior{
+  display: grid;
+  grid-column: 2;
+  grid-row: 5;
+  font-family: 'Pixelify Sans', cursive;
+  justify-content: center;
+  align-items: center;
+}
+
+.valorTituloDiaNoche{
+  display: grid;
+  grid-column: 2;
+  grid-row: 6;
+  font-family: 'Pixelify Sans', cursive;
+  justify-content: center;
+  align-items: center;
+}
+
+.valorTituloUvIndice{
+  display: grid;
+  grid-column: 2;
+  grid-row: 7;
+  font-family: 'Pixelify Sans', cursive;
+  justify-content: center;
+  align-items: center;
+}
+
+.valorTituloVientoVelocidad{
+  display: grid;
+  grid-column: 2;
+  grid-row: 8;
+  font-family: 'Pixelify Sans', cursive;
+    justify-content: center;
+  align-items: center;
+}
+
+.imagenExteriorProbabilidadLluvia{
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.imagenExteriorHumedadExterior{
+  display: grid;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.imagenExteriorHumedadSuelo{
+  display: grid;
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.imagenExteriorTemperaturaSuelo{
+  display: grid;
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.imagenExteriorTemperaturaExterior{
+  display: grid;
+  grid-column: 1;
+  grid-row: 5;
+}
+
+.imagenExteriorDiaNoche{
+  display: grid;
+  grid-column: 1;
+  grid-row: 6;
+}
+
+.imagenExteriorUvIndice{
+  display: grid;
+  grid-column: 1;
+  grid-row: 7;
+}
+
+.imagenExteriorVientoVelocidad{
+  display: grid;
+  grid-column: 1;
+  grid-row: 8;
+}
+
+.ambienteInterior {
   display: grid;
   grid-template-columns: 1fr 1fr; 
   grid-template-rows: repeat(4, 1fr); 
   align-items: center;
   justify-items: center;
-  width: 100%;
   background-color: rgba(47, 47, 47, 0.463);
   border-radius: 15px;
   width: 65%;
@@ -66,21 +265,25 @@ input[type="number"]::-webkit-up-down-buttons {
 .imagenHumedad {
   grid-column: 1; 
   grid-row: 1;
+  width: 10vh;
 }
 
 .imagenTanque {
   grid-column: 1; 
   grid-row: 2;
+  width: 10vh;
 }
 
 .imagenTemperatura {
   grid-column: 1; 
   grid-row: 3;
+  width: 10vh;
 }
 
 .imagenViento {
   grid-column: 1; 
   grid-row: 4;
+  width: 10vh;
 }
 
 .valorHumedad {
@@ -135,8 +338,8 @@ input[type="number"]::-webkit-up-down-buttons {
 
 .plantas {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
   width: 100%;
   font-family: 'Pixelify Sans', cursive;
   align-items: center;
@@ -146,81 +349,96 @@ input[type="number"]::-webkit-up-down-buttons {
   margin-top: 3vh;
 }
 
+.strongHumedad{
+  display: grid;
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.strongLuz{
+  display: grid;
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.strongNombre{
+  display: grid;
+  grid-row: 1;
+  grid-column: 4;
+}
+
 .plantas img {
   width: 10vh;
+}
+
+.imagenPlantaUno{
+  display: grid;
   grid-column: 1;
+  grid-row: 2;
+}
+
+.humedadPlantaUno{
+  display: grid;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.lumensPlantaUno{
+  display: grid;
+  grid-column: 3;
+  grid-row: 2;
 }
 
 .estadoPlantaUno{
-grid-column: 3;
-grid-row: 1;
+  display: grid;
+  grid-column: 4;
+  grid-row: 2;
+}
+
+.imagenPlantaDos{
+  display: grid;
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.humedadPlantaDos{
+  display: grid;
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.lumensPlantaDos{
+  display: grid;
+  grid-column: 3;
+  grid-row: 3;
 }
 
 .estadoPlantaDos{
-grid-column: 3;
-grid-row: 2;
+  display: grid;
+  grid-column: 4;
+  grid-row: 3;
 }
 
-.estadoPlantaTres{
-grid-column: 3;
-grid-row: 3;
-}
-
-.estadoPlantaCuatro{
-grid-column: 3;
-grid-row: 4;
-display: none;
-}
-
-.estadoPlantaCinco{
-grid-column: 3;
-grid-row: 5;
-display: none;
-}
-
-.estadoPlantaSeis{
-grid-column: 3;
-grid-row: 6;
-display: none;
-}
-
-.estadoPlantaSiete{
-grid-column: 3;
-grid-row: 7;
-display: none;
-}
-
-.estadoPlantaOcho{
-grid-column: 3;
-grid-row: 8;
-display: none;
-}
-
-.estadoPlantaNueve{
-grid-column: 3;
-grid-row: 9;
-display: none;
-}
-
-.estadoPlantaDiez{
-  grid-column: 3;
-  grid-row: 10;
-  display: none;
-}
-
-.mostrarPlanta{
+.imagenPlantaTres{
+  display: grid;
+  grid-column: 1;
   grid-row: 4;
 }
 
-.mostrarPlantaBoton{
-  grid-row: 5;
+.humedadPlantaTres{
+  display: grid;
+  grid-column: 2;
+  grid-row: 4;
 }
 
-.mostrarPlantaResultado{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-row:6;
-  grid-column: span 3;
-  font-family: 'MuseoModerno', cursive;
+.lumensPlantaTres{
+  display: grid;
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.estadoPlantaTres{
+  display: grid;
+  grid-column: 4;
+  grid-row: 4;
 }

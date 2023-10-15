@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+      </style>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
+      <script type="module" src="../js/ambienteInt.js" defer></script>
+      <script type="module" src="../js/ingreoPlantaInt.js" defer></script>
+      <script type="module" src="../js/main.js" defer></script>
+    <title>Simulador indoor</title>
+</head>
+
+<body>
+    <section class="titulo">
+        <h1>Simulador de espacio de cultivo</h1>
+        <a href="outdoor.html"><button>Let's go outside</button></a>
+    </section>
+    <hr class="hr">
+    <section class="form">
+        <form class="formIngreso">
+            <label for="inputNombre">Nombre</label>
+            <input type="text" id="inputNombre" name="nombre" placeholder="Nombre de la planta">
+            <label for="inputHumedad">Humedad</label>
+            <select id="inputHumedad">
+                <option value=""></option>
+                <option value="baja">Baja</option>
+                <option value="media">Media</option>
+                <option value="alta">Alta</option>
+              </select>
+            <label for="inputLumens">Luz</label>
+            <select id="inputLumens">
+                <option value=""></option>
+                <option value="baja">Baja</option>
+                <option value="media">Media</option>
+                <option value="alta">Alta</option>
+              </select>
+            <button type="button" id="ingresarPlanta">Ingresar</button>   
+        </form>
+    </section>
+    <section class="entorno">
+        <div class="ambienteInterior">
+            <p class="ambienteHumedadEstado" id="ambienteHumedadEstado"></p>
+            <p class="ambienteTanqueEstado" id="ambienteTanqueEstado"></p>
+            <p class="ambienteTemperaturaEstado" id="ambienteTemperaturaEstado"></p>
+            <p class="ambienteVientoEstado" id="ambienteVientoEstado"></p>
+            <img class="imagenHumedad" src="../img/imgHumedadAmbiente.png" alt="valor de humedad"></img>
+            <img class="imagenTanque" src="../img/imgTanque.png" alt="valor de tanque"></img>
+            <img class="imagenTemperatura" src="../img/imgTemperatura.png" alt="valor de temperatura"></img>
+            <img class="imagenViento" src="../img/imgViento.png" alt="valor de viento"></img>
+            <p class="valorHumedad" id="ambienteResultadosHumedad"></p>
+            <p class="valorTanque" id="ambienteResultadosTanque"></p>
+            <p class="valorTemperatura" id="ambienteResultadosTemperatura"></p>
+            <p class="valorViento" id="ambienteResultadosViento"></p>
+        </div>
+        <div class="plantas" id="espacioPlantas">
+            <strong class="strongHumedad">Humedad</strong>
+            <strong class="strongLuz">Luz</strong>
+            <strong class="strongNombre">Nombre</strong>
+            <img class="imagenPlantaUno" id="imagenPlantaUno" src="../img/planta1.png" alt="Planta numero uno">
+            <img class="imagenPlantaDos" id="imagenPlantaDos" src="../img/planta2.png" alt="Planta numero dos">
+            <img class="imagenPlantaTres" id="imagenPlantaTres" src="../img/planta3.png" alt="Planta numero tres">
+            <p class="humedadPlantaUno" id="humedadPlantaUno"></p>
+            <p class="lumensPlantaUno" id="lumensPlantaUno"></p>
+            <p class="estadoPlantaUno" id="estadoPlantaUno"></p>
+            <p class="humedadPlantaDos" id="humedadPlantaDos"></p>
+            <p class="lumensPlantaDos" id="lumensPlantaDos"></p>
+            <p class="estadoPlantaDos" id="estadoPlantaDos"></p>
+            <p class="humedadPlantaTres" id="humedadPlantaTres"></p>
+            <p class="lumensPlantaTres" id="lumensPlantaTres"></p>
+            <p class="estadoPlantaTres" id="estadoPlantaTres"></p>
+        </div>
+    </section>
+    <audio id="musica-de-fondo" class="musicBackground" autoplay loop><source src="../music/Background Music.mp3" type="audio/mpeg"></audio>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
